@@ -19,7 +19,7 @@ def create_pipeline(**kwargs):
                 ),
             node(
                 func=rename_columns,
-                inputs="strokeData",
+                inputs="strokeData_limited",
                 outputs="strokeData_renamed",
                 name="rename_columns"
                 ),
