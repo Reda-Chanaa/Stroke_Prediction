@@ -1,0 +1,16 @@
+limit_size : 
+test_size: 0.2
+random_state: 3
+features:
+  - Id
+  - Gender
+  - Age
+  - Hypertension
+  - Heart_disease
+  - Ever_married
+  - Work_type
+  - Residence_type
+  - Avg_glucose_level
+  - Bmi
+  - Smoking_status
+  - Stroke
