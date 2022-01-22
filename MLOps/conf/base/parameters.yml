@@ -1,8 +1,7 @@
-limit_size : 
+limit_size : 10000
 test_size: 0.2
 random_state: 3
 features:
-  - Id
   - Gender
   - Age
   - Hypertension
@@ -13,4 +12,3 @@ features:
   - Avg_glucose_level
   - Bmi
   - Smoking_status
-  - Stroke
