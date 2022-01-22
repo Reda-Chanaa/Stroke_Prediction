@@ -9,19 +9,19 @@ strokeData:
 
 strokeData_limited:
   type: pandas.CSVDataSet
-  filepath: data/01_raw/strokeData_limited.csv
+  filepath: data/02_intermediate/strokeData_limited.csv
 
 strokeData_renamed:
   type: pandas.CSVDataSet
-  filepath: data/01_raw/strokeData_renamed.csv
+  filepath: data/02_intermediate/strokeData_renamed.csv
 
 strokeData_missing:
   type: pandas.CSVDataSet
-  filepath: data/01_raw/strokeData_missing.csv
+  filepath: data/02_intermediate/strokeData_missing.csv
  
-strokeData_summarized:
+strokeData_encoded:
   type: pandas.CSVDataSet
-  filepath: data/03_primary/strokeData_summarized.csv
+  filepath: data/03_primary/strokeData_encoded.csv
 
 train:
   type: pandas.CSVDataSet
