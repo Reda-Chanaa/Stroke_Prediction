@@ -15,6 +15,14 @@ strokeData_renamed:
   type: pandas.CSVDataSet
   filepath: data/01_raw/strokeData_renamed.csv
 
+strokeData_missing:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/strokeData_missing.csv
+ 
+strokeData_summarized:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/strokeData_summarized.csv
+
 train:
   type: pandas.CSVDataSet
   filepath: data/05_model_input/train.csv
