@@ -68,7 +68,7 @@ def rename_columns(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 def missing_values(data: pd.DataFrame) -> pd.DataFrame:
-    """ removing the missing values form dataset
+    """ replacing missing values in the dataset
 
     Args:
         data (pd.DataFrame): the original inconsistent col name dataset
@@ -77,7 +77,9 @@ def missing_values(data: pd.DataFrame) -> pd.DataFrame:
         pd.DataFrame: data set without missing values
     """
 
-    return data.dropna(subset=['Bmi'])
+    data['Bmi'].fillna(data['Bmi'].mean(), inplace=True)
+
+    return data
 
 def encode(data: pd.DataFrame) -> pd.DataFrame:
     """ There are categorical features in the data. So we need to encode them into numeric features
