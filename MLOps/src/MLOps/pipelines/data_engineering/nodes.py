@@ -102,13 +102,17 @@ def summarize(data: pd.DataFrame) -> pd.DataFrame:
     data['Work_type'].replace("Private", 0,inplace=True)
     data['Work_type'].replace('children', 1,inplace=True)
     data['Work_type'].replace('Self-employed', 2,inplace=True)
+    data['Work_type'].replace('Govt_job', 3,inplace=True)
+    data['Work_type'].replace('Never_worked', 4,inplace=True)
+    
+    # for Residence_type column
+    data['Residence_type'].replace('Rural', 0,inplace=True)
+    data['Residence_type'].replace("Urban", 1,inplace=True)
 
-    data['RestingECG'].replace('ST', 1,inplace=True)
-    data['RestingECG'].replace('LVH', 2,inplace=True)
-    data['ExerciseAngina'].replace('Y', 1,inplace=True)
-    data['ExerciseAngina'].replace('N', 0,inplace=True)
-    data['ST_Slope'].replace('Up', 1,inplace=True)
-    data['ST_Slope'].replace('Flat', 0,inplace=True)
-    data['ST_Slope'].replace('Down', 2,inplace=True)
+    # for Smoking_status column
+    data['Smoking_status'].replace("never smoked", 0,inplace=True)
+    data['Smoking_status'].replace('smokes', 1,inplace=True)
+    data['Smoking_status'].replace('formerly smoked', 2,inplace=True)
+    data['Smoking_status'].replace('Unknown', 3,inplace=True)
 
     return data
