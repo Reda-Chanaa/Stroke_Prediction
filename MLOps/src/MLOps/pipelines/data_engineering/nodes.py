@@ -23,7 +23,6 @@ def limit_data_size(data: pd.DataFrame, limit_size: int) -> pd.DataFrame:
 
     return data.head(limit_size)
 
-
 def rename_columns(data: pd.DataFrame) -> pd.DataFrame:
     """ Rename the original column names into camelCase
 
@@ -78,9 +77,9 @@ def missing_values(data: pd.DataFrame) -> pd.DataFrame:
         pd.DataFrame: data set without missing values
     """
 
-    return data.dropna(subset=['bmi'])
+    return data.dropna(subset=['Bmi'])
 
-def summarize(data: pd.DataFrame) -> pd.DataFrame:
+def encode(data: pd.DataFrame) -> pd.DataFrame:
     """ There are categorical features in the data. So we need to encode them into numeric features
 
     Args:

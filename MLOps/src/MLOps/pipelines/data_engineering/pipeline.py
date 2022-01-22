@@ -1,6 +1,6 @@
 from kedro.pipeline import Pipeline, node
 
-from .nodes import limit_data_size, missing_values,rename_columns, summarize
+from .nodes import limit_data_size, missing_values,rename_columns, encode
 
 def create_pipeline(**kwargs):
     # Create the pipeline that will transfer the appropriate
@@ -26,10 +26,10 @@ def create_pipeline(**kwargs):
                 name="missing_values"
                 ),
             node(
-                func=summarize,
-                inputs="strokeData_renamed",
-                outputs="strokeData_summarized",
-                name="summarize"
+                func=encode,
+                inputs="strokeData_missing",
+                outputs="strokeData_encoded",
+                name="encode"
                 ),
         ]
         )
