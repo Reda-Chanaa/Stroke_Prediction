@@ -1,6 +1,10 @@
 from kedro.pipeline import Pipeline, node
 
-from .nodes import limit_data_size, missing_values,rename_columns, encode
+from .nodes.encode import  encode
+from .nodes.missing_values import missing_values
+from .nodes.rename_columns import rename_columns
+from .nodes.limit_data_size import limit_data_size
+
 
 def create_pipeline(**kwargs):
     # Create the pipeline that will transfer the appropriate
