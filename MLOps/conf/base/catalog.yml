@@ -2,3 +2,28 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/05_data/01_data_catalog.html
+
+strokeData:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/strokeData.csv
+
+strokeData_limited:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/strokeData_limited.csv
+
+strokeData_renamed:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/strokeData_renamed.csv
+
+train:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/train.csv
+
+test:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/test.csv
+
+regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor.pickle
+  versioned: true
