@@ -3,7 +3,7 @@ from MLOps.pipelines.data_engineering.nodes.rename_columns  import rename_column
 from pandas._testing import assert_frame_equal
 
 def test_rename_columns () :
-    data = pd.read_csv('data/02_intermediate/strokeData_missing.csv')
+    data = pd.read_csv('data/02_intermediate/strokeData_limited.csv')
     output = rename_columns(data)
     output.reset_index(drop=True)
     assert "Id" in output.columns
