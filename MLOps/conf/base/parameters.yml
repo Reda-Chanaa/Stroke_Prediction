@@ -1,14 +1,12 @@
 limit_size : 10000
 test_size: 0.2
-random_state: 3
+random_state: 0
 features:
   - Gender
   - Age
   - Hypertension
   - Heart_disease
-  - Ever_married
   - Work_type
-  - Residence_type
   - Avg_glucose_level
   - Bmi
   - Smoking_status

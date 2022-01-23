@@ -18,7 +18,15 @@ strokeData_renamed:
 strokeData_missing:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/strokeData_missing.csv
- 
+
+strokeData_rebase:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/strokeData_rebase.csv
+
+strokeData_clean:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/strokeData_clean.csv
+
 strokeData_encoded:
   type: pandas.CSVDataSet
   filepath: data/03_primary/strokeData_encoded.csv
@@ -52,4 +60,24 @@ LinearRegressor:
 LogisticRegressor:
   type: pickle.PickleDataSet
   filepath: data/06_models/LogisticRegressor.pickle
+  versioned: true
+
+AdaClassifier:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/AdaClassifier.pickle
+  versioned: true
+
+Mlflow:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/Mlflow.pickle
+  versioned: true
+
+SVC_CLaassifier:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/SVC_CLaassifier.pickle
+  versioned: true
+
+pycaret_classification:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/pycaret_classification.pickle
   versioned: true
