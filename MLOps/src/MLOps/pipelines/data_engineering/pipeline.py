@@ -1,10 +1,10 @@
 from kedro.pipeline import Pipeline, node
 
-from .nodes.encode import  encode
 from .nodes.missing_values import missing_values
 from .nodes.rename_columns import rename_columns
 from .nodes.limit_data_size import limit_data_size
-
+from .nodes.rebase import rebase
+from .nodes.clean import clean
 
 def create_pipeline(**kwargs):
     # Create the pipeline that will transfer the appropriate
@@ -30,10 +30,16 @@ def create_pipeline(**kwargs):
                 name="missing_values"
                 ),
             node(
-                func=encode,
+                func=rebase,
                 inputs="strokeData_missing",
-                outputs="strokeData_encoded",
-                name="encode"
+                outputs="strokeData_rebase",
+                name="rebase"
                 ),
+            node(
+                func=clean,
+                inputs="strokeData_rebase",
+                outputs="strokeData_cleaned",
+                name="clean"
+                )
         ]
         )

@@ -23,9 +23,9 @@ strokeData_rebase:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/strokeData_rebase.csv
 
-strokeData_clean:
+strokeData_cleaned:
   type: pandas.CSVDataSet
-  filepath: data/02_intermediate/strokeData_clean.csv
+  filepath: data/02_intermediate/strokeData_cleaned.csv
 
 strokeData_encoded:
   type: pandas.CSVDataSet
@@ -47,37 +47,30 @@ y_test:
   type: pandas.CSVDataSet
   filepath: data/05_model_input/y_test.csv
 
+df_train:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/df_train.csv
+
+df_test:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/df_test.csv
+
 model_input:
   type: pandas.ParquetDataSet
   filepath: data/05_model_input/model_input.pq
   layer: model_input
 
-LinearRegressor:
+pycaret_AdaBoost:
   type: pickle.PickleDataSet
-  filepath: data/06_models/LinearRegressor.pickle
+  filepath: data/06_models/pycaret_AdaBoost.pickle
   versioned: true
 
-LogisticRegressor:
+pycaret_random_forest:
   type: pickle.PickleDataSet
-  filepath: data/06_models/LogisticRegressor.pickle
+  filepath: data/06_models/pycaret_random_forest.pickle
   versioned: true
 
-AdaClassifier:
+pycaret_Light_GBM:
   type: pickle.PickleDataSet
-  filepath: data/06_models/AdaClassifier.pickle
-  versioned: true
-
-Mlflow:
-  type: pickle.PickleDataSet
-  filepath: data/06_models/Mlflow.pickle
-  versioned: true
-
-SVC_CLaassifier:
-  type: pickle.PickleDataSet
-  filepath: data/06_models/SVC_CLaassifier.pickle
-  versioned: true
-
-pycaret_classification:
-  type: pickle.PickleDataSet
-  filepath: data/06_models/pycaret_classification.pickle
+  filepath: data/06_models/pycaret_Light_GBM.pickle
   versioned: true

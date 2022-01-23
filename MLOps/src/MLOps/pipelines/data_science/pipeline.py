@@ -1,46 +1,37 @@
 from kedro.pipeline import Pipeline, node
 
-from .nodes.split_data import split_data
-from .nodes.LogisticRegression import Logistic_Regression
-from .nodes.pycaret import pycaret_classification
-from .nodes.AdaBoost import AB_Classifier
-from .nodes.SVC import SVC_Classifier
+from .nodes.Mlflow_Random_Forest import pycaret_random_forest
+from .nodes.Mlflow_AdaBoost import pycaret_AdaBoost
+from .nodes.Mlflow_Light_GBM import pycaret_Light_GBM
+from .nodes.Training import training
 
 def create_pipeline(**kwargs):
     return Pipeline(
         [
             node(
-                func=split_data,
-                inputs=["strokeData_encoded", "parameters"],
-                outputs=["X_train", "X_test", "y_train", "y_test"],
-                name="model_input",
+                func=training,
+                inputs=["strokeData_cleaned", "parameters"],
+                outputs=["df_train", "df_test"],
+                name="training"
             ),
             node(
-                func=Logistic_Regression,
-                inputs=["X_train", "X_test", "y_train", "y_test"],
-                outputs="LogisticRegressor",
-                name="LogisticRegressor",
+                func=pycaret_AdaBoost,
+                inputs=["df_train","df_test"],
+                outputs="pycaret_AdaBoost",
+                name="pycaret_AdaBoost",
             ),
             node(
-                func=AB_Classifier,
-                inputs=["X_train", "X_test", "y_train", "y_test"],
-                outputs="AdaClassifier",
-                name="AdaClassifier",
+                func=pycaret_random_forest,
+                inputs=["df_train","df_test"],
+                outputs="pycaret_random_forest",
+                name="pycaret_random_forest",
+            ),
+            node(
+                func=pycaret_Light_GBM,
+                inputs=["df_train","df_test"],
+                outputs="pycaret_Light_GBM",
+                name="pycaret_Light_GBM",
             ),
             
         ]
     )
-
-"""
-            node(
-                func=pycaret_classification,
-                inputs=["strokeData_encoded"],
-                outputs="pycaret_classification",
-                name="pycaret_classification",
-            ),
-            node(
-                func=SVC_Classifier,
-                inputs=["X_train", "X_test", "y_train", "y_test"],
-                outputs="SVC_CLaassifier",
-                name="SVC_CLaassifier",
-            ),"""
