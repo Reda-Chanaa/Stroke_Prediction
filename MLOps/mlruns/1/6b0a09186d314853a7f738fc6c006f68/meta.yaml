@@ -1,0 +1,15 @@
+artifact_uri: file:///home/chanaa/Bureau/Kedro/MLOps/mlruns/1/6b0a09186d314853a7f738fc6c006f68/artifacts
+end_time: 1642975432529
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 6b0a09186d314853a7f738fc6c006f68
+run_uuid: 6b0a09186d314853a7f738fc6c006f68
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1642975428024
+status: 3
+tags: []
+user_id: chanaa
