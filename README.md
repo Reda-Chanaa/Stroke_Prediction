@@ -1,6 +1,9 @@
 Group : Reda CHANAA et Kévin IBARES
+
 github : https://github.com/Reda-Chanaa/Stroke_Prediction
+
 Dataset: https://www.kaggle.com/fedesoriano/stroke-prediction-dataset
+
 Goal of the project : The goal of this project was to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status. Each row in the data provides relavant information about the patient. After analyzing data and comparing and selecting with the package Pycaret the most suitable models for our problem, we built a pipeline using kedro and monitored our models using MLFlow.
 
 
