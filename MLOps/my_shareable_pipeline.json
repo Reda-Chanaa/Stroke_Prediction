@@ -1,0 +1,505 @@
+{
+    "edges": [
+        {
+            "source": "9ca016a8",
+            "target": "00adf462"
+        },
+        {
+            "source": "f6d9538c",
+            "target": "43ae057b"
+        },
+        {
+            "source": "872981f9",
+            "target": "00adf462"
+        },
+        {
+            "source": "cae2d1c7",
+            "target": "00adf462"
+        },
+        {
+            "source": "6a2a43f3",
+            "target": "02f04da0"
+        },
+        {
+            "source": "e54dafd2",
+            "target": "872981f9"
+        },
+        {
+            "source": "00adf462",
+            "target": "0cde08ee"
+        },
+        {
+            "source": "e40a0395",
+            "target": "9d63d8d4"
+        },
+        {
+            "source": "d2ea68b3",
+            "target": "9f111a37"
+        },
+        {
+            "source": "e54dafd2",
+            "target": "9ca016a8"
+        },
+        {
+            "source": "b2fcd287",
+            "target": "f12eca3a"
+        },
+        {
+            "source": "9ca016a8",
+            "target": "43ae057b"
+        },
+        {
+            "source": "f12eca3a",
+            "target": "e40a0395"
+        },
+        {
+            "source": "e54dafd2",
+            "target": "f6d9538c"
+        },
+        {
+            "source": "872981f9",
+            "target": "43ae057b"
+        },
+        {
+            "source": "cae2d1c7",
+            "target": "43ae057b"
+        },
+        {
+            "source": "f1f1425b",
+            "target": "e54dafd2"
+        },
+        {
+            "source": "2df249ae",
+            "target": "02f04da0"
+        },
+        {
+            "source": "43ae057b",
+            "target": "94c959c4"
+        },
+        {
+            "source": "c7744603",
+            "target": "b2fcd287"
+        },
+        {
+            "source": "f6d9538c",
+            "target": "00adf462"
+        },
+        {
+            "source": "9d63d8d4",
+            "target": "e54dafd2"
+        },
+        {
+            "source": "9f111a37",
+            "target": "c7744603"
+        },
+        {
+            "source": "02f04da0",
+            "target": "d2ea68b3"
+        },
+        {
+            "source": "e54dafd2",
+            "target": "cae2d1c7"
+        }
+    ],
+    "layers": [],
+    "modular_pipelines": {
+        "__root__": {
+            "children": [
+                {
+                    "id": "f1f1425b",
+                    "type": "parameters"
+                },
+                {
+                    "id": "e54dafd2",
+                    "type": "task"
+                },
+                {
+                    "id": "9ca016a8",
+                    "type": "data"
+                },
+                {
+                    "id": "872981f9",
+                    "type": "data"
+                },
+                {
+                    "id": "cae2d1c7",
+                    "type": "data"
+                },
+                {
+                    "id": "f12eca3a",
+                    "type": "data"
+                },
+                {
+                    "id": "02f04da0",
+                    "type": "task"
+                },
+                {
+                    "id": "d2ea68b3",
+                    "type": "data"
+                },
+                {
+                    "id": "9f111a37",
+                    "type": "task"
+                },
+                {
+                    "id": "9d63d8d4",
+                    "type": "data"
+                },
+                {
+                    "id": "c7744603",
+                    "type": "data"
+                },
+                {
+                    "id": "b2fcd287",
+                    "type": "task"
+                },
+                {
+                    "id": "e40a0395",
+                    "type": "task"
+                },
+                {
+                    "id": "0cde08ee",
+                    "type": "data"
+                },
+                {
+                    "id": "43ae057b",
+                    "type": "task"
+                },
+                {
+                    "id": "6a2a43f3",
+                    "type": "data"
+                },
+                {
+                    "id": "f6d9538c",
+                    "type": "data"
+                },
+                {
+                    "id": "2df249ae",
+                    "type": "parameters"
+                },
+                {
+                    "id": "94c959c4",
+                    "type": "data"
+                },
+                {
+                    "id": "00adf462",
+                    "type": "task"
+                }
+            ],
+            "id": "__root__",
+            "inputs": [],
+            "name": "Root",
+            "outputs": []
+        }
+    },
+    "nodes": [
+        {
+            "full_name": "limit_data_size",
+            "id": "02f04da0",
+            "modular_pipelines": [],
+            "name": "Limit Data Size",
+            "parameters": {
+                "limit_size": 10000
+            },
+            "pipelines": [
+                "dp",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+            "full_name": "strokeData",
+            "id": "6a2a43f3",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Strokedata",
+            "pipelines": [
+                "dp",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "params:limit_size",
+            "id": "2df249ae",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Params: Limit Size",
+            "pipelines": [
+                "dp",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "parameters"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+            "full_name": "strokeData_limited",
+            "id": "d2ea68b3",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Strokedata Limited",
+            "pipelines": [
+                "dp",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "rename_columns",
+            "id": "9f111a37",
+            "modular_pipelines": [],
+            "name": "Rename Columns",
+            "parameters": {},
+            "pipelines": [
+                "dp",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+            "full_name": "strokeData_renamed",
+            "id": "c7744603",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Strokedata Renamed",
+            "pipelines": [
+                "dp",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "missing_values",
+            "id": "b2fcd287",
+            "modular_pipelines": [],
+            "name": "Missing Values",
+            "parameters": {},
+            "pipelines": [
+                "dp",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+            "full_name": "strokeData_missing",
+            "id": "f12eca3a",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Strokedata Missing",
+            "pipelines": [
+                "dp",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "encode",
+            "id": "e40a0395",
+            "modular_pipelines": [],
+            "name": "Encode",
+            "parameters": {},
+            "pipelines": [
+                "dp",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+            "full_name": "strokeData_encoded",
+            "id": "9d63d8d4",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Strokedata Encoded",
+            "pipelines": [
+                "dp",
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "model_input",
+            "id": "e54dafd2",
+            "modular_pipelines": [],
+            "name": "Model Input",
+            "parameters": {
+                "features": [
+                    "Gender",
+                    "Age",
+                    "Hypertension",
+                    "Heart_disease",
+                    "Ever_married",
+                    "Work_type",
+                    "Residence_type",
+                    "Avg_glucose_level",
+                    "Bmi",
+                    "Smoking_status"
+                ],
+                "limit_size": 10000,
+                "random_state": 3,
+                "test_size": 0.2
+            },
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "parameters",
+            "id": "f1f1425b",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Parameters",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "parameters"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+            "full_name": "X_train",
+            "id": "cae2d1c7",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "X Train",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+            "full_name": "X_test",
+            "id": "872981f9",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "X Test",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+            "full_name": "y_train",
+            "id": "9ca016a8",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Y Train",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+            "full_name": "y_test",
+            "id": "f6d9538c",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Y Test",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "AdaClassifier",
+            "id": "00adf462",
+            "modular_pipelines": [],
+            "name": "Adaclassifier",
+            "parameters": {},
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pickle.pickle_dataset.PickleDataSet",
+            "full_name": "AdaClassifier",
+            "id": "0cde08ee",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Adaclassifier",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "LogisticRegressor",
+            "id": "43ae057b",
+            "modular_pipelines": [],
+            "name": "Logisticregressor",
+            "parameters": {},
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pickle.pickle_dataset.PickleDataSet",
+            "full_name": "LogisticRegressor",
+            "id": "94c959c4",
+            "layer": null,
+            "modular_pipelines": [],
+            "name": "Logisticregressor",
+            "pipelines": [
+                "__default__",
+                "ds"
+            ],
+            "tags": [],
+            "type": "data"
+        }
+    ],
+    "pipelines": [
+        {
+            "id": "__default__",
+            "name": "Default"
+        },
+        {
+            "id": "dp",
+            "name": "Dp"
+        },
+        {
+            "id": "ds",
+            "name": "Ds"
+        }
+    ],
+    "selected_pipeline": "__default__",
+    "tags": []
+}
